@@ -73,12 +73,6 @@ h1, h2, h3, h4 {
     justify-content: center;
 }
 
-@media only screen and (max-width: 1800px) {
-    .wrapper {
-        width: 100vw !important;
-    }
-}
-
 .wrapper {
     position: relative;
     width: 40vw;
@@ -205,4 +199,45 @@ h1, h2, h3, h4 {
 .selected-item {
     border-color: black;
     color: black;
+}
+
+@media only screen and (max-width: 1800px) {
+    .wrapper {
+        width: 100vw !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .member-details {
+        position: relative;
+        right: 0;
+        text-align: center;
+    }
+
+    .member-card {
+        flex-direction: column;
+        padding: 0.5rem;
+        box-sizing: border-box;
+        gap: 0.5rem;
+    }
+
+    .img-overlay {
+        display: none
+    }
+
+    .member-text {
+        text-align: center;
+    }
+
+    .member-card img:not(.rank-icon) {
+        border-radius: 50%;
+    }
+
+    .navigation {
+        height: 13rem;
+    }
+
+    .database-wrapper {
+        height: calc(100vh - 13rem);
+    }
 }
