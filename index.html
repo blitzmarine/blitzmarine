@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blitzmarine Database</title>
+        <link rel="icon" href="blitzmarine.png">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- <script src="script.js"></script> -->
+        <script src="script.js"></script>
+    </head>
+    <body class="centered-children">
+        <div id="loadingScreen" class="centered-children">
+            <span class="loader"></span>
+            <div id="loaderText"></div>
+        </div>
+        <div class="wrapper">
+            <div class="navigation">
+                <div class="centered-vertically" style="gap: 1rem">
+                    <img style="width: 3.5rem; height: 3.5rem" src="blitzmarine.png">
+                    <div>
+                        <h1>Blitzmarine Database</h1>
+                        <h2><i>"The Lightning Navy"</i></h2>
+                    </div>
+                </div>
+                <br>
+                <div style="position: relative" class="centered-vertically">
+                    <img class="search-icon" src="icon_search.png">
+                    <input id="search" type="text" autocomplete="off" spellcheck="false">
+                </div>
+                <div class="centered-children" style="gap: 1rem; justify-content: left; margin: 0.5rem 0">
+                    <div class="selection selected-item" onclick="setSelection(this, 0)">Rank</div>
+                    <div class="selection" onclick="setSelection(this, 1)">Valor</div>
+                    <div class="selection" onclick="setSelection(this, 2)">Joined</div>
+                </div>
+            </div>
+            <div class="database-wrapper">
+                <div id="database"></div>
+            </div>
+        </div>
+    </body>
+</html>
